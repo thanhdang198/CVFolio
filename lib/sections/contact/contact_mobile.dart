@@ -23,6 +23,7 @@ class ContactMobileTab extends StatelessWidget {
           itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0),
             child: ProjectCard(
+              projectLink: ContactUtils.contactLinks[i],
               projectIconData: ContactUtils.contactIcon[i],
               projectTitle: ContactUtils.titles[i],
               projectDescription: ContactUtils.details[i],

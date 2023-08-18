@@ -4,9 +4,7 @@ import 'package:folio/constants.dart';
 import 'package:folio/utils/about_utils.dart';
 
 import 'package:folio/utils/utils.dart';
-import 'package:folio/utils/work_utils.dart';
 import 'package:folio/widget/about_me_data.dart';
-import 'package:folio/widget/community_button.dart';
 import 'package:folio/widget/custom_text_heading.dart';
 import 'package:folio/widget/tech_widget.dart';
 
@@ -95,32 +93,32 @@ class AboutDesktop extends StatelessWidget {
                         color: Colors.grey[800],
                         thickness: AppDimensions.normalize(0.5),
                       ),
-                      Row(
+                      const Row(
                         children: [
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
+                            children: [
                               AboutMeData(
                                 data: "Name",
-                                information: "Muhammad Hamza",
+                                information: "Thanh Dang",
                               ),
                               AboutMeData(
                                 data: "Age",
-                                information: "24",
+                                information: "25",
                               ),
                             ],
                           ),
-                          const Spacer(),
+                          Spacer(),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
+                            children: [
                               AboutMeData(
                                 data: "Email",
-                                information: "hamza.6.shakeel@gmail.com",
+                                information: "dangtrongthanh1998@gmail.com",
                               ),
                               AboutMeData(
                                 data: "From",
-                                information: "Attock, PK",
+                                information: "Nghe An",
                               ),
                             ],
                           ),
@@ -140,22 +138,6 @@ class AboutDesktop extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Space.x1!,
-                          Container(
-                            color: Colors.grey[900]!,
-                            width: AppDimensions.normalize(30),
-                            height: AppDimensions.normalize(0.5),
-                          ),
-                          ...WorkUtils.logos.asMap().entries.map(
-                                (e) => Expanded(
-                                  child: CommunityIconBtn(
-                                    icon: e.value,
-                                    link: WorkUtils.communityLinks[e.key],
-                                    height:
-                                        WorkUtils.communityLogoHeight[e.key],
-                                  ),
-                                ),
-                              )
                         ],
                       ),
                     ],

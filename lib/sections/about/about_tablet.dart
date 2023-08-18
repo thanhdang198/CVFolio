@@ -93,32 +93,32 @@ class AboutTab extends StatelessWidget {
           Space.y!,
           Row(
             children: [
-              Column(
+              const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   AboutMeData(
                     data: "Name",
-                    information: "Muhammad Hamza",
+                    information: "Thanh Dang",
                   ),
                   AboutMeData(
                     data: "Age",
-                    information: "24",
+                    information: "25",
                   ),
                 ],
               ),
               SizedBox(
                 width: width > 710 ? width * 0.2 : width * 0.05,
               ),
-              Column(
+              const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   AboutMeData(
                     data: "Email",
-                    information: "hamza.6.shakeel@gmail.com",
+                    information: "dangtrongthanh1998@gmail.com",
                   ),
                   AboutMeData(
                     data: "From",
-                    information: "Attock, PK",
+                    information: "Nghe An",
                   ),
                 ],
               ),

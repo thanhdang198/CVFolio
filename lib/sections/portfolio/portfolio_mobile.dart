@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/constants.dart';
@@ -27,7 +30,13 @@ class PortfolioMobileTab extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 15.0),
             child: ProjectCard(
               projectIcon: ProjectUtils.icons[i],
-              projectLink: ProjectUtils.links[i],
+              projectLink: kIsWeb
+                  ? ProjectUtils.webLinks[i]
+                  : Platform.isAndroid
+                      ? ProjectUtils.androidLinks[i]
+                      : Platform.isIOS
+                          ? ProjectUtils.iOSLinks[i]
+                          : ProjectUtils.webLinks[i],
               projectTitle: ProjectUtils.titles[i],
               projectDescription: ProjectUtils.description[i],
             ),

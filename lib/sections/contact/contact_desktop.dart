@@ -29,6 +29,7 @@ class ContactDesktop extends StatelessWidget {
                   .entries
                   .map((e) => WidgetAnimator(
                         child: ProjectCard(
+                          projectLink: ContactUtils.contactLinks[e.key],
                           projectIconData: e.value,
                           projectTitle: ContactUtils.titles[e.key],
                           projectDescription: ContactUtils.details[e.key],

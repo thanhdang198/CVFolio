@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/constants.dart';
@@ -37,7 +40,13 @@ class _PortfolioDesktopState extends State<PortfolioDesktop> {
                   (e) => ProjectCard(
                     banner: e.value,
                     projectIcon: ProjectUtils.icons[e.key],
-                    projectLink: ProjectUtils.links[e.key],
+                    projectLink: kIsWeb
+                        ? ProjectUtils.webLinks[e.key]
+                        : Platform.isAndroid
+                            ? ProjectUtils.androidLinks[e.key]
+                            : Platform.isIOS
+                                ? ProjectUtils.iOSLinks[e.key]
+                                : ProjectUtils.webLinks[e.key],
                     projectTitle: ProjectUtils.titles[e.key],
                     projectDescription: ProjectUtils.description[e.key],
                   ),

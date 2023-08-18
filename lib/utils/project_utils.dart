@@ -1,38 +1,26 @@
 class ProjectUtils {
   static const List<String> banners = [
-    "assets/projects/snackbar.png",
-    "assets/projects/quranB.png",
-    "assets/projects/medkitB.png",
-    "assets/projects/hereiamB.png",
-    "assets/projects/covidB.png",
+    "assets/projects/gopage.png",
+    "assets/projects/diachiso.png",
+    "assets/projects/navigation.jpeg",
+    "assets/projects/navigation.jpeg",
+    "assets/projects/navigation.jpeg",
   ];
 
   static const List<String> icons = [
     "assets/projects/flutter.png",
-    "assets/projects/quran.png",
-    "assets/projects/medkit.png",
-    "assets/projects/hereiam.png",
-    "assets/projects/covid.png",
-    "assets/projects/messenger.png",
     "assets/projects/flutter.png",
-    "assets/projects/earbender.png",
-    "assets/projects/java.png",
-    "assets/projects/android.png",
-    "assets/services/open_b.png",
+    "assets/projects/flutter.png",
+    "assets/projects/flutter.png",
+    "assets/projects/flutter.png",
   ];
 
   static const List<String> titles = [
-    "Awesome Snackbar Dart Package",
-    "The Holy Qur'an",
-    "MedKit",
-    "Here I Am",
-    "COVID-19",
-    "Messenger Chat Head UI",
-    "flutter.dev - Flutter Web",
-    "Earbender",
-    "File Transfer Protocol",
-    "My Order",
-    "Hidev",
+    "GoPage App",
+    "Địa chỉ số",
+    "Map and Navigation Demo App",
+    "VietMap Flutter GL",
+    "VietMap Flutter Navigation",
   ];
 
   static const List<String> description = [
@@ -49,17 +37,26 @@ class ProjectUtils {
     "Its my end semester project. The whole design I developed here is an inspiration from my favortie Flutter Developer Marcin Szałek and his blog Fidev."
   ];
 
-  static const List<String> links = [
-    "https://pub.dev/packages/awesome_snackbar_content",
-    "https://github.com/mhmzdev/The_Holy_Quran_App",
-    "https://github.com/mhmzdev/MedKit-Pharmacy-App-Using-Flutter",
-    "https://github.com/mhmzdev/Here-I-Am-Alert-App",
-    "https://github.com/mhmzdev/Covid19-Tracker-App",
-    "https://github.com/mhmzdev/Messenger-Chat-Head-Flutter-UI",
-    "https://github.com/mhmzdev/flutter.dev-Flutter-Web-Clone",
-    "https://github.com/mhmzdev/Earbender_Music_App",
-    "https://github.com/mhmzdev/FTP_GUI_Java",
-    "https://github.com/mhmzdev/My-Order-Resturant-Ordering-System",
-    "https://github.com/mhmzdev/Hidev_Web",
+  static const List<String> webLinks = [
+    "https://gopage.me/",
+    "https://diachiso.gov.vn/",
+    "https://maps.vietmap.vn/docs/sdk-mobile/sdk-android/",
+    "https://pub.dev/packages/vietmap_flutter_gl",
+    "https://pub.dev/packages/vietmap_flutter_navigation"
+  ];
+
+  static const List<String> androidLinks = [
+    "https://gopage.me/",
+    "https://diachiso.gov.vn/",
+    "https://maps.vietmap.vn/docs/sdk-mobile/sdk-android/",
+    "https://pub.dev/packages/vietmap_flutter_gl",
+    "https://pub.dev/packages/vietmap_flutter_navigation"
+  ];
+  static const List<String> iOSLinks = [
+    "https://gopage.me/",
+    "https://diachiso.gov.vn/",
+    "https://maps.vietmap.vn/docs/sdk-mobile/sdk-android/",
+    "https://pub.dev/packages/vietmap_flutter_gl",
+    "https://pub.dev/packages/vietmap_flutter_navigation"
   ];
 }
