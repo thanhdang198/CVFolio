@@ -42,7 +42,9 @@ class _NavbarDesktop extends StatelessWidget {
                 padding: Space.all(1.25, 0.45),
                 child: Text(
                   'RESUME',
-                  style: AppText.l1b,
+                  style: AppText.l1b!.copyWith(
+                    color: AppTheme.c!.primary!,
+                  ),
                 ),
               ),
             ),

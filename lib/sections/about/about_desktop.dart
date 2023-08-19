@@ -4,8 +4,10 @@ import 'package:folio/constants.dart';
 import 'package:folio/utils/about_utils.dart';
 
 import 'package:folio/utils/utils.dart';
+import 'package:folio/utils/work_utils.dart';
 import 'package:folio/widget/about_me_data.dart';
 import 'package:folio/widget/custom_text_heading.dart';
+import 'package:folio/widget/experience.dart';
 import 'package:folio/widget/tech_widget.dart';
 
 import 'package:universal_html/html.dart' as html;
@@ -73,6 +75,48 @@ class AboutDesktop extends StatelessWidget {
                         color: Colors.grey[800],
                         thickness: AppDimensions.normalize(0.5),
                       ),
+                      Text(
+                        'My experience:',
+                        style: AppText.b1!.copyWith(
+                          color: AppTheme.c!.primary,
+                        ),
+                      ),
+                      Space.y1!,
+                      Wrap(
+                        alignment: WrapAlignment.center,
+                        crossAxisAlignment: WrapCrossAlignment.center,
+                        children: WorkUtils.communityLinks
+                            .map((e) => CompanyExperience(
+                                  projectLink: e,
+                                  banner: WorkUtils.logos[
+                                      WorkUtils.communityLinks.indexOf(e)],
+                                  projectTitle: WorkUtils.experienceTitle[
+                                      WorkUtils.communityLinks.indexOf(e)],
+                                  projectDescription:
+                                      WorkUtils.experienceDescription[
+                                          WorkUtils.communityLinks.indexOf(e)],
+                                ))
+                            .toList(),
+                      ),
+                      /*
+                      InkWell(
+                                  onTap: () {
+                                    launchUrlString(e);
+                                  },
+                                  child: Image.asset(
+                                    WorkUtils.logos[
+                                        WorkUtils.communityLinks.indexOf(e)],
+                                    width: AppDimensions.normalize(
+                                        MediaQuery.of(context).size.width *
+                                            0.1),
+                                  ),
+                                )
+                      */
+                      Space.y1!,
+                      Divider(
+                        color: Colors.grey[800],
+                        thickness: AppDimensions.normalize(0.5),
+                      ),
                       Space.y!,
                       Text(
                         'Technologies I have worked with:',
@@ -93,28 +137,29 @@ class AboutDesktop extends StatelessWidget {
                         color: Colors.grey[800],
                         thickness: AppDimensions.normalize(0.5),
                       ),
-                      const Row(
+                      Row(
                         children: [
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              AboutMeData(
+                              const AboutMeData(
                                 data: "Name",
-                                information: "Thanh Dang",
+                                information: "Thanh Dang Trong",
                               ),
                               AboutMeData(
                                 data: "Age",
-                                information: "25",
+                                information:
+                                    (DateTime.now().year - 1998).toString(),
                               ),
                             ],
                           ),
-                          Spacer(),
-                          Column(
+                          const Spacer(),
+                          const Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               AboutMeData(
                                 data: "Email",
-                                information: "dangtrongthanh1998@gmail.com",
+                                information: "thanhdang98@thanhdt.dev",
                               ),
                               AboutMeData(
                                 data: "From",
@@ -131,10 +176,17 @@ class AboutDesktop extends StatelessWidget {
                             height: AppDimensions.normalize(13),
                             width: AppDimensions.normalize(40),
                             child: OutlinedButton(
+                              style: OutlinedButton.styleFrom(
+                                side: BorderSide(
+                                  color: AppTheme.c!.primary!,
+                                ),
+                              ),
                               onPressed: () =>
                                   html.window.open(StaticUtils.resume, 'pdf'),
-                              child: const Text(
+                              child: Text(
                                 "Resume",
+                                style: AppText.l1b!
+                                    .copyWith(color: AppTheme.c!.primary),
                               ),
                             ),
                           ),

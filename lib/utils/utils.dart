@@ -16,9 +16,9 @@ class StaticUtils {
 
   // work
   static const String dsc = 'assets/work/dsc.png';
-  static const String sastaticket = 'assets/work/st.png';
-  static const String university = 'assets/work/cui.png';
-  static const String fullterIsb = 'assets/work/flutterIsl.png';
+  static const String gostream = 'assets/work/gostream.png';
+  static const String university = 'assets/work/vinh.png';
+  static const String vietmap = 'assets/work/vm.png';
 
   // services
   static const String uiux = 'assets/services/ui.png';
@@ -32,12 +32,14 @@ class StaticUtils {
     "https://img.icons8.com/metro/208/ffffff/facebook-new--v2.png",
     "https://img.icons8.com/metro/308/ffffff/linkedin.png",
     "https://img.icons8.com/material-rounded/384/ffffff/github.png",
+    "https://img.icons8.com/?size=512&id=84866&format=png"
   ];
 
   static const List<String> socialLinks = [
     "https://facebook.com/thanhdang98",
     "https://linkedin.com/in/thanhdang98",
-    "https://github.com/thanhdang198"
+    "https://github.com/thanhdang198",
+    "mailto:thanhdang98@thanhdt.dev"
   ];
 
   static const String resume =

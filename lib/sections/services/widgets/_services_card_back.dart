@@ -30,7 +30,7 @@ class _ServiceCardBackWidget extends StatelessWidget {
                 context: context,
                 builder: (contecxt) => AlertDialog(
                       title: Text(
-                        "Hire Me!",
+                        "Contact",
                         style: AppText.b2b,
                       ),
                       actions: [
@@ -70,7 +70,7 @@ class _ServiceCardBackWidget extends StatelessWidget {
                       ),
                     )),
             child: Text(
-              'HIRE ME!',
+              'CONTACT',
               style: AppText.b2!.copyWith(
                 color: Colors.white,
               ),
