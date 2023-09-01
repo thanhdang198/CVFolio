@@ -1,4 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
+
 import 'package:flutter/material.dart';
+import 'package:folio/extension/date_extension.dart';
 import 'package:folio/provider/app_provider.dart';
 import 'package:folio/provider/drawer_provider.dart';
 import 'package:folio/provider/scroll_provider.dart';
@@ -7,9 +11,12 @@ import 'package:provider/provider.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'package:folio/configs/core_theme.dart' as theme;
 
-void main() {
+import 'firebase_options.dart';
+
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   setPathUrlStrategy();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
@@ -55,7 +62,33 @@ class _MaterialChildState extends State<MaterialChild> {
   @override
   void initState() {
     initAppTheme();
+
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      incrementVisitCount();
+    });
+  }
+
+  incrementVisitCount() async {
+    var db = FirebaseFirestore.instance;
+    var ref = db.collection('visitCount').doc('allVisited');
+    await ref.update({
+      'count': FieldValue.increment(1),
+    });
+
+    DateTime now = DateTime.now();
+    var checkIfToDayDocExits =
+        await db.collection('visitCount').doc(now.getDayMonthYear()).get();
+
+    if (!checkIfToDayDocExits.exists) {
+      await db.collection('visitCount').doc(now.getDayMonthYear()).set({
+        'count': 1,
+      });
+    } else {
+      await db.collection('visitCount').doc(now.getDayMonthYear()).update({
+        'count': FieldValue.increment(1),
+      });
+    }
   }
 
   @override
