@@ -88,16 +88,22 @@ class ProjectCardState extends State<ProjectCard> {
               children: [
                 widget.projectIcon != null
                     ? (width > 1135 || width < 950)
-                        ? Image.asset(
-                            widget.projectIcon!,
-                            height: height * 0.05,
+                        ? ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              widget.projectIcon!,
+                              height: height * 0.05,
+                            ),
                           )
                         : Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              Image.asset(
-                                widget.projectIcon!,
-                                height: height * 0.03,
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image.asset(
+                                  widget.projectIcon!,
+                                  height: height * 0.03,
+                                ),
                               ),
                               SizedBox(
                                 width: width * 0.01,

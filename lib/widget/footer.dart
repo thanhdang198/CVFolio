@@ -1,7 +1,10 @@
+// import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:folio/constants.dart';
 import 'package:folio/extension/date_extension.dart';
+import 'package:folio/extension/number_extension.dart';
+// import 'package:folio/extension/date_extension.dart';
 
 class Footer extends StatelessWidget {
   const Footer({Key? key}) : super(key: key);
@@ -19,23 +22,6 @@ class Footer extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Center(
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const Text(
-                  "Developed in 💙 with ",
-                ),
-                InkWell(
-                  onTap: () => openURL("https://github.com/thanhdang198"),
-                  child: const Text(
-                    "Flutter",
-                    style: TextStyle(color: Colors.blue),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Center(
               child: Row(mainAxisSize: MainAxisSize.min, children: [
             const Text('Visited: '),
             // get version from firebase
@@ -46,8 +32,9 @@ class Footer extends StatelessWidget {
                   .snapshots(),
               builder: (context, AsyncSnapshot snapshot) {
                 if (snapshot.hasData) {
+                  int count = snapshot.data['count'];
                   return Text(
-                    snapshot.data['count'].toString(),
+                    count.convertToCurrency(),
                     style: const TextStyle(color: Colors.blue),
                   );
                 } else {
@@ -67,8 +54,9 @@ class Footer extends StatelessWidget {
                   .snapshots(),
               builder: (context, AsyncSnapshot snapshot) {
                 if (snapshot.hasData) {
+                  int count = snapshot.data['count'];
                   return Text(
-                    snapshot.data['count'].toString(),
+                    count.convertToCurrency() + ' 💙',
                     style: const TextStyle(color: Colors.blue),
                   );
                 } else {
@@ -79,7 +67,25 @@ class Footer extends StatelessWidget {
                 }
               },
             ),
-          ]))
+          ])),
+          const SizedBox(height: 10),
+          Center(
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Text(
+                  "Developed in 💙 with ",
+                ),
+                InkWell(
+                  onTap: () => openURL("https://github.com/thanhdang198"),
+                  child: const Text(
+                    "Flutter",
+                    style: TextStyle(color: Colors.blue),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

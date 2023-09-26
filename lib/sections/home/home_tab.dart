@@ -5,6 +5,7 @@ import 'package:folio/configs/configs.dart';
 import 'package:folio/utils/utils.dart';
 
 import 'package:folio/widget/social_links.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeTab extends StatelessWidget {
   const HomeTab({Key? key}) : super(key: key);
@@ -51,7 +52,7 @@ class HomeTab extends StatelessWidget {
                     Text(
                       'WELCOME TO MY PORTFOLIO! ',
                       style: AppText.b2!.copyWith(
-                        fontFamily: 'Montserrat',
+                        fontFamily: GoogleFonts.montserrat().fontFamily,
                       ),
                     ),
                     EntranceFader(
@@ -69,7 +70,7 @@ class HomeTab extends StatelessWidget {
                 Text(
                   "Dang Trong",
                   style: AppText.h1!.copyWith(
-                    fontFamily: 'Montserrat',
+                    fontFamily: GoogleFonts.montserrat().fontFamily,
                     fontWeight: FontWeight.w100,
                   ),
                 ),

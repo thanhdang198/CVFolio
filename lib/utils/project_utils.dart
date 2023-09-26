@@ -8,10 +8,10 @@ class ProjectUtils {
   ];
 
   static const List<String> icons = [
+    "assets/projects/dcs.png",
     "assets/projects/flutter.png",
     "assets/projects/flutter.png",
-    "assets/projects/flutter.png",
-    "assets/projects/flutter.png",
+    "assets/projects/gp.png",
     "assets/projects/flutter.png",
   ];
 
@@ -40,17 +40,17 @@ class ProjectUtils {
   ];
 
   static const List<String> androidLinks = [
-    "https://diachiso.gov.vn/",
+    "https://play.google.com/store/apps/details?id=vn.vadd.application&hl=en&gl=US/",
     "https://pub.dev/packages/vietmap_flutter_gl",
     "https://pub.dev/packages/vietmap_flutter_navigation",
-    "https://gopage.me/",
+    "https://play.google.com/store/apps/details?id=vn.gostream.gopage&hl=en&gl=US/",
     "https://maps.vietmap.vn/docs/sdk-mobile/sdk-android/",
   ];
   static const List<String> iOSLinks = [
-    "https://diachiso.gov.vn/",
+    "https://apps.apple.com/vn/app/%C4%91%E1%BB%8Ba-ch%E1%BB%89-s%E1%BB%91/id1596691265?l=vi/",
     "https://pub.dev/packages/vietmap_flutter_gl",
     "https://pub.dev/packages/vietmap_flutter_navigation",
-    "https://gopage.me/",
+    "https://apps.apple.com/vn/app/gopage/id1511656552?l=vi/",
     "https://maps.vietmap.vn/docs/sdk-mobile/sdk-android/",
   ];
 }

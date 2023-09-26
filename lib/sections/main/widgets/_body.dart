@@ -8,7 +8,15 @@ class _Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scrollProvider = Provider.of<ScrollProvider>(context);
-
+    // return SizedBox(
+    //   height: UI.height,
+    //   child: CarouselSlider.builder(
+    //       itemCount: BodyUtils.views.length,
+    //       itemBuilder: (_, index, __) => BodyUtils.views[index],
+    //       options: CarouselOptions(
+    //         scrollDirection: Axis.vertical,
+    //       )),
+    // );
     return ListView.builder(
       controller: scrollProvider.controller,
       itemCount: BodyUtils.views.length,

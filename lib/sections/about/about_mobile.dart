@@ -5,6 +5,7 @@ import 'package:folio/utils/about_utils.dart';
 import 'package:folio/utils/utils.dart';
 
 import 'package:folio/widget/custom_text_heading.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:universal_html/html.dart' as html;
 
 import 'package:flutter/material.dart';
@@ -53,7 +54,7 @@ class AboutMobile extends StatelessWidget {
           Text(
             AboutUtils.aboutMeHeadline,
             style: AppText.b2b!.copyWith(
-              fontFamily: 'Montserrat',
+              fontFamily: GoogleFonts.montserrat().fontFamily,
             ),
           ),
           SizedBox(
@@ -64,7 +65,7 @@ class AboutMobile extends StatelessWidget {
             style: AppText.l1!.copyWith(
               height: 2,
               letterSpacing: 1.1,
-              fontFamily: 'Montserrat',
+              fontFamily: GoogleFonts.montserrat().fontFamily,
             ),
           ),
           Space.y!,
@@ -132,13 +133,15 @@ class AboutMobile extends StatelessWidget {
             ),
           ),
           Space.y!,
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: kTools
-                .map(
-                  (e) => ToolTechWidget(techName: e),
-                )
-                .toList(),
+          FittedBox(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: kTools
+                  .map(
+                    (e) => ToolTechWidget(techName: e),
+                  )
+                  .toList(),
+            ),
           ),
           Space.y!,
           Divider(
@@ -154,7 +157,7 @@ class AboutMobile extends StatelessWidget {
           ),
           const AboutMeData(
             data: "Email",
-            information: "thanhdang98@thanhdt.dev",
+            information: "contact@thanhdt.dev",
           ),
           Space.y!,
           OutlinedButton(

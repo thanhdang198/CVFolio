@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-const fontFamily = 'Poppins';
+final fontFamily = GoogleFonts.poppins().fontFamily;
 
 final themeLight = ThemeData(
   primaryColorLight: const Color.fromARGB(255, 2, 44, 231),

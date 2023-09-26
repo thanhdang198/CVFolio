@@ -26,7 +26,7 @@ class AppText {
 
   static init() {
     const b = FontWeight.bold;
-    const baseStyle = TextStyle(
+    final baseStyle = TextStyle(
       fontFamily: fontFamily,
     );
 

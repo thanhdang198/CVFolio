@@ -150,7 +150,10 @@ class CompanyExperienceState extends State<CompanyExperience> {
                     ? Container(
                         width: AppDimensions.normalize(120),
                         height: AppDimensions.normalize(50),
-                        decoration: const BoxDecoration(color: Colors.white),
+                        decoration: BoxDecoration(
+                            color: appProvider.isDark
+                                ? Colors.grey[900]
+                                : Colors.white),
                         child: Image.asset(
                           widget.banner!,
                         ),

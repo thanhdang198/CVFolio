@@ -29,6 +29,13 @@
             {
               "client_id": "1065787546688-k779245bnvlqntqrhevktjphp49tbm60.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1065787546688-m9u8rsfek7nba5cljsgud4j3di1jfgt2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hmz.folio"
+              }
             }
           ]
         }

@@ -5,6 +5,7 @@ import 'package:folio/utils/utils.dart';
 import 'package:folio/utils/work_utils.dart';
 
 import 'package:folio/widget/custom_text_heading.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:flutter/material.dart';
 import 'package:folio/constants.dart';
@@ -55,7 +56,7 @@ class AboutTab extends StatelessWidget {
           Text(
             AboutUtils.aboutMeHeadline,
             style: AppText.b2b!.copyWith(
-              fontFamily: 'Montserrat',
+              fontFamily: GoogleFonts.montserrat().fontFamily,
             ),
           ),
           SizedBox(
@@ -66,7 +67,7 @@ class AboutTab extends StatelessWidget {
             style: AppText.l1!.copyWith(
               height: 2,
               letterSpacing: 1.1,
-              fontFamily: 'Montserrat',
+              fontFamily: GoogleFonts.montserrat().fontFamily,
             ),
           ),
           Space.y!,
@@ -170,7 +171,7 @@ class AboutTab extends StatelessWidget {
                 children: [
                   AboutMeData(
                     data: "Email",
-                    information: "thanhdang98@thanhdt.dev",
+                    information: "contact@thanhdt.dev",
                   ),
                   AboutMeData(
                     data: "From",

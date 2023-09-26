@@ -70,8 +70,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1065787546688',
     projectId: 'portfolio-dd598',
     storageBucket: 'portfolio-dd598.appspot.com',
-    iosClientId:
-        '1065787546688-m9u8rsfek7nba5cljsgud4j3di1jfgt2.apps.googleusercontent.com',
+    iosClientId: '1065787546688-m9u8rsfek7nba5cljsgud4j3di1jfgt2.apps.googleusercontent.com',
     iosBundleId: 'com.hmz.folio',
   );
 }

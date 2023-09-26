@@ -7,16 +7,25 @@ import 'package:folio/provider/app_provider.dart';
 import 'package:folio/provider/drawer_provider.dart';
 import 'package:folio/provider/scroll_provider.dart';
 import 'package:folio/sections/main/main_section.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'package:folio/configs/core_theme.dart' as theme;
 
-import 'firebase_options.dart';
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   setPathUrlStrategy();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  await Firebase.initializeApp(
+    options: const FirebaseOptions(
+        measurementId: 'G-V77JRJ3ZPL',
+        apiKey: 'AIzaSyDFE2VU8smsUO66UcZ6JRR-QLZcOVchX1k',
+        appId: '1:1065787546688:web:a9fe74c32c8131b14bd3a5',
+        messagingSenderId: '1065787546688',
+        storageBucket: 'portfolio-dd598.appspot.com',
+        authDomain: 'portfolio-dd598.firebaseapp.com',
+        projectId: 'portfolio-dd598'),
+  );
   runApp(const MyApp());
 }
 
@@ -96,7 +105,11 @@ class _MaterialChildState extends State<MaterialChild> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Thanh',
-      theme: theme.themeLight,
+      theme: theme.themeLight.copyWith(
+        textTheme: theme.themeLight.textTheme.apply(
+          fontFamily: GoogleFonts.montserrat().fontFamily,
+        ),
+      ),
       darkTheme: theme.themeDark,
       themeMode: widget.provider.themeMode,
       initialRoute: "/",

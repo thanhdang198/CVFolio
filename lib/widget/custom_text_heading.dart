@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:folio/configs/app_typography.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomSectionHeading extends StatelessWidget {
   final String text;
@@ -14,7 +15,7 @@ class CustomSectionHeading extends StatelessWidget {
     return Text(
       text,
       style: AppText.h1!.copyWith(
-        fontFamily: 'Montserrat',
+        fontFamily: GoogleFonts.montserrat().fontFamily,
       ),
     );
   }
@@ -31,7 +32,7 @@ class CustomSectionSubHeading extends StatelessWidget {
     return Text(
       text,
       style: AppText.l1!.copyWith(
-        fontFamily: 'Montserrat',
+        fontFamily: GoogleFonts.montserrat().fontFamily,
       ),
     );
   }

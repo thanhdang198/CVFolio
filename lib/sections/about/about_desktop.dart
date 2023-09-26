@@ -9,6 +9,7 @@ import 'package:folio/widget/about_me_data.dart';
 import 'package:folio/widget/custom_text_heading.dart';
 import 'package:folio/widget/experience.dart';
 import 'package:folio/widget/tech_widget.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:universal_html/html.dart' as html;
 
@@ -56,7 +57,7 @@ class AboutDesktop extends StatelessWidget {
                       Text(
                         AboutUtils.aboutMeHeadline,
                         style: AppText.b1b!.copyWith(
-                          fontFamily: 'Montserrat',
+                          fontFamily: GoogleFonts.montserrat().fontFamily,
                         ),
                       ),
                       Space.y!,
@@ -65,7 +66,7 @@ class AboutDesktop extends StatelessWidget {
                         style: AppText.b2!.copyWith(
                           height: 2,
                           letterSpacing: 1.1,
-                          fontFamily: 'Montserrat',
+                          fontFamily: GoogleFonts.montserrat().fontFamily,
                           fontSize: AppDimensions.normalize(5),
                         ),
                         textAlign: TextAlign.justify,
@@ -159,7 +160,7 @@ class AboutDesktop extends StatelessWidget {
                             children: [
                               AboutMeData(
                                 data: "Email",
-                                information: "thanhdang98@thanhdt.dev",
+                                information: "contact@thanhdt.dev",
                               ),
                               AboutMeData(
                                 data: "From",
