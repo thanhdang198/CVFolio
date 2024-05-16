@@ -8,8 +8,8 @@ class WorkUtils {
   ];
 
   static const List<String> communityLinks = [
-    "https://vietmap.vn/",
-    "https://gopage.me/",
+    "https://vietmap.vn/maps-api",
+    "https://gostream.co/vi",
     "https://vinhuni.edu.vn/trang-chu.html",
   ];
 
@@ -19,9 +19,9 @@ class WorkUtils {
     "09/2016 - 06/2021",
   ];
   static const List<String> experienceTitle = [
-    "Mobile developer - VietMap",
-    "Mobile developer - GoPage",
-    "Student - Vinh University",
+    "Mobile developer\nVietMap Mapping Solutions",
+    "Mobile developer\nGoPage",
+    "Student\nVinh University",
   ];
 
   static const List<double> communityLogoHeight = [60.0, 70.0, 30.0, 70.0];

@@ -10,7 +10,8 @@ final themeLight = ThemeData(
   highlightColor: Colors.black,
   canvasColor: Colors.white,
   fontFamily: fontFamily,
-  backgroundColor: Colors.white,
+  // colorSchemeSeed: Colors.white,
+  // backgroundColor: Colors.white,
   splashColor: Colors.transparent,
   scaffoldBackgroundColor: Colors.white,
   colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red).copyWith(
@@ -27,7 +28,8 @@ final themeDark = ThemeData(
   canvasColor: Colors.white,
   fontFamily: fontFamily,
   splashColor: Colors.transparent,
-  backgroundColor: Colors.grey[800],
+  // backgroundColor: Colors.grey[800],
+  // colorSchemeSeed: Colors.grey[800],
   scaffoldBackgroundColor: Colors.black,
   colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red).copyWith(
     secondary: const Color.fromARGB(255, 2, 44, 231),

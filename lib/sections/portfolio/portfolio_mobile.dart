@@ -31,9 +31,9 @@ class PortfolioMobileTab extends StatelessWidget {
             child: ProjectCard(
               projectIcon: ProjectUtils.icons[i],
               projectLink: kIsWeb
-                  ? getOSInsideWeb() == 'android'
+                  ? getOSInsideWeb() == 'Android'
                       ? ProjectUtils.androidLinks[i]
-                      : getOSInsideWeb() == 'ios'
+                      : getOSInsideWeb() == 'iOS'
                           ? ProjectUtils.iOSLinks[i]
                           : ProjectUtils.webLinks[i]
                   : Platform.isAndroid

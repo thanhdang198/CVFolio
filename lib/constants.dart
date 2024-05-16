@@ -1,5 +1,6 @@
-import 'dart:html';
+// import 'dart:html' show window;
 
+import 'package:universal_html/html.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // URL Launcher
@@ -11,10 +12,9 @@ void openURL(String url) => launchUrl(
 final kTools = [
   "Flutter",
   "Dart",
-  "Kotlin",
-  "Java",
+  "Kotlin/Java",
   "Swift",
-  "Clean architecture"
+  "React Native",
 ];
 
 getOSInsideWeb() {

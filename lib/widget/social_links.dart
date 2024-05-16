@@ -31,7 +31,7 @@ class SocialLinks extends StatelessWidget {
                   color: appProvider.isDark ? Colors.white : Colors.black,
                   height: Responsive.isMobile(context)
                       ? AppDimensions.normalize(10)
-                      : null,
+                      : AppDimensions.normalize(15),
                 ),
                 iconSize: Responsive.isMobile(context)
                     ? AppDimensions.normalize(10)
@@ -39,7 +39,7 @@ class SocialLinks extends StatelessWidget {
                 onPressed: () => openURL(
                   StaticUtils.socialLinks[e.key],
                 ),
-                hoverColor: AppTheme.c!.primary!,
+                hoverColor: AppTheme.c!.primary!.withOpacity(0.6),
               ),
             ),
           )
